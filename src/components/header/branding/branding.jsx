@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {getIdeaSuccess, sendEmail} from "../../../actions/actions";
 import Popup from '../../elements/popup/popup';
+import Lightbox from '../../elements/lightbox/lightbox';
 
 class Branding extends Component{
 
@@ -57,6 +58,7 @@ class Branding extends Component{
                         </button>
                     </div>
                 </div>
+                <Lightbox/>
                 <Popup
                     title={'Получить идею подарка'}
                     state={this.state.popupGetIdea}
