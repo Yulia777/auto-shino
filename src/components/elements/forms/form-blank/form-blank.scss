@@ -20,7 +20,6 @@
   @each $field in (field, message) {
     &__#{$field} {
       border: 1px solid #959595;
-      border-radius: 20px;
       padding: 10px 20px;
       box-sizing: border-box;
       margin-bottom: 15px;

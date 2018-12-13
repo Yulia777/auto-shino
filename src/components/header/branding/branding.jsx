@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {getIdeaSuccess, sendEmail} from "../../../actions/actions";
 import Popup from '../../elements/popup/popup';
-import Lightbox from '../../elements/lightbox/lightbox';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Branding extends Component{
 
@@ -45,22 +45,47 @@ class Branding extends Component{
             <section className="branding">
                 <div className="container branding__wrap">
                     <div className="branding__item">
-                        <h1 className="branding__title">
-                            ПЕРЕОБУЕМ ВАШУ ЛАСТОЧКУ <span>ЗА 20 МИНУТ,</span><br/>
-                            В ЛЮБОМ РАЙОНЕ МОСКВЫ
-                        </h1>
+                        <div className="branding--logo">
+                            <div className="branding--logo__item">
+                                <h1 className="branding__title">
+                                    КУПИ СЕЙЧАС,<br/>
+                                    ПОСТРОЙ ВЕСНОЙ
+                                </h1>
+                            </div>
+                            <div className="branding--logo__item">
+                                <div className="square"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="branding__item">
                         <p className="branding__desc">
-                            Запишитесь без очереди в ближайший к вам автосервис:
+                            Всё дорожает... К сожалению, и мы не в силах сдерживать рост цен.
                         </p>
-                        <button className="branding__btn" onClick={this.openPopupGetIdea.bind(this)}>
-                            ЗАПИСАТЬСЯ НА ШИНОМОНТАЖ В УДОБНОЕ ВРЕМЯ
-                            <span className="rippleEffect"></span>
-                        </button>
+                        <p className="branding__desc">
+                            В связи с повышением <span>НДС с 1 января 2019 г.,</span> повышаются цены на стройматериалы
+                            на <span>15%.</span>
+                        </p>
                     </div>
                 </div>
-                <Lightbox/>
+                <div className="order">
+                    <h2 className="order__title">
+                        УСПЕЙТЕ ЗАБРОНИРОВАТЬ ДОМ<br/>
+                        ИЗ КЛЕЁННОГО БРУСА <span>ПО ЦЕНАМ 2018 г.</span>
+                    </h2>
+                    <button className="branding__btn" onClick={this.openPopupGetIdea.bind(this)}>
+                        <p>
+                            <FontAwesomeIcon icon="check" />
+                        </p>
+                        <p>
+                            ЗАБРОНИРОВАТЬ ДОМ ПО ЦЕНЕ 2018 г.
+                        </p>
+                    </button>
+                    <a href="" className="order__link">
+                        УЗНАТЬ ПОДРОБНЕЕ
+                    </a>
+                </div>
                 <Popup
-                    title={'Получить идею подарка'}
+                    title={'Забронировать дом по цене 2018г'}
                     state={this.state.popupGetIdea}
                     close={this.closePopupGetIdea.bind(this)}
                     type={'email'}

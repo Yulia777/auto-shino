@@ -10,11 +10,17 @@ import Scheme from './main/scheme/scheme';
 import Questions from './main/questions/questions';
 import Branding from './header/branding/branding';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faIgloo,faCheck } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faIgloo,faCheck);
+
 class MyApp extends React.Component{
     render() {
         return(
             <div>
-                <Header/>
+               {/* <Header/>*/}
                 <main>
                     <Branding/>
                     {/*<Categories/>
