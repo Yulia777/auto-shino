@@ -23,10 +23,10 @@ class MyApp extends React.Component{
                {/* <Header/>*/}
                 <main>
                     <Branding/>
-                    {/*<Categories/>
+                    <Categories/>
                     <Recommendations/>
                     <Examples/>
-                    <Visualization/>
+                    {/*<Visualization/>
                     <Clients/>
                     <Presentation/>
                     <Scheme/>

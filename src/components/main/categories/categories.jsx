@@ -48,86 +48,51 @@ class Categories extends Component{
             <section className="categories">
                 <div className="container categories__wrap">
                     <h2 className="categories__title">
-                        Более 20 категорий сувенирной продукции
+                        Для определения объёма стройматериалов и сметной стоимости на ваш будущий дом,
+                        предлагаем Экспресс услугу - <span>Эскизное проектирование с 3D моделированием</span>
                     </h2>
-                    <p className="categories__desc">
-                        Нанесем надпись или логотип на любой из 250 товаров
-                    </p>
-                    <div className="goods">
-                        <div className="goods__item">
-                            <div className="good">
-                                <img src="./images/dom-min.png" className="good__img" alt="Дом" title="Дом"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Дом
-                                </p>
-                            </div>
-                            <div className="good">
-                                <img src="./images/otdyh-min.png" className="good__img" alt="Отдых" title="Отдых"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Отдых
-                                </p>
-                            </div>
-                            <div className="good">
-                                <img src="./images/ofis-min.png" className="good__img" alt="Офис" title="Офис"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Офис
-                                </p>
-                            </div>
-                            <div className="good">
-                                <img src="./images/korporat-min.png" className="good__img" alt="Корпоративные подарки"
-                                     title="Корпоративные подарки"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Корпоративные подарки
-                                </p>
-                            </div>
+                    <div className="modeling">
+                        <div className="modeling__item">
+                            <img src="./images/sk/modeling3d.jpg" alt="Моделирование 3d" title="Моделирование 3d"/>
+                            <p className="image-title">
+                                «Дизайн проект гостиной и кухни»
+                            </p>
                         </div>
-                        <div className="goods__item">
-                            <div className="good">
-                                <img src="./images/odejda-min.png" className="good__img" alt="Одежда"
-                                     title="Одежда"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Одежда
-                                </p>
+                        <div className="modeling__item">
+                            <div className="advantages">
+                                <div className="advantages__item">
+                                    <img src="./images/sk/fireplace.png" alt="камин"/>
+                                </div>
+                                <div className="advantages__item">
+                                    Прочувствуйте уют и комфорт вашего будущего дома
+                                </div>
                             </div>
-                            <div className="good">
-                                <img src="./images/elit-min.png" className="good__img" alt="Элитные подарки"
-                                     title="Элитные подарки"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Элитные подарки
-                                </p>
+                            <div className="advantages">
+                                <div className="advantages__item">
+                                    <img src="./images/sk/stool.png" alt="мебель"/>
+                                </div>
+                                <div className="advantages__item">
+                                    Расставьте мебель и сантехнику
+                                </div>
                             </div>
-                            <div className="good">
-                                <img src="./images/promo-min.png" className="good__img" alt="Промо-сувениры"
-                                     title="Промо-сувениры"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Промо-сувениры
-                                </p>
+                            <div className="advantages">
+                                <div className="advantages__item">
+                                    <img src="./images/sk/cube.png" alt="площадь комнат"/>
+                                </div>
+                                <div className="advantages__item">
+                                    Ощутите размеры и площадь комнат
+                                </div>
                             </div>
-                            <div className="good">
-                                <img src="./images/praznik-min.png" className="good__img" alt="Сувениры к праздникам"
-                                     title="Сувениры к праздникам"
-                                     onClick={this.openPopupOrder.bind(this)}/>
-                                <p className="good__desc">
-                                    Сувениры к праздникам
-                                </p>
+                            <div className="modeling__btn">
+                                <button className="btn" onClick={this.openPopupOrder.bind(this)}>
+                                    УЗНАТЬ ПОДРОБНЕЕ
+                                </button>
                             </div>
-                        </div>
-                        <div className="goods__btn">
-                            <button className="btn" onClick={this.openPopupOrder.bind(this)}>
-                                Сделать заказ
-                            </button>
                         </div>
                     </div>
                 </div>
                 <Popup
-                    title={'Сделать заказ'}
+                    title={'Получить экспресс услугу'}
                     state={this.state.popupOrder}
                     close={this.closePopupOrder.bind(this)}
                     type={'blank'}

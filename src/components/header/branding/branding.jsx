@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {getIdeaSuccess, sendEmail} from "../../../actions/actions";
 import Popup from '../../elements/popup/popup';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Branding extends Component{
 

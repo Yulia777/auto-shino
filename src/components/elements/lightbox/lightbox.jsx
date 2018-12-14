@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 
 const images = [
-    './images/new/car-one-max.jpg',
-    './images/new/car-two-max.jpg',
-    './images/new/car-three-max.jpg',
-    './images/new/car-four-max.jpg',
+    './images/sk/wood.jpg',
+    './images/sk/sertificate1-1.jpg',
+    './images/sk/sertificate-0.jpg',
+    './images/sk/sertificate3-3.jpg',
 ];
 
 export default class LightboxExample extends Component {
@@ -24,13 +24,13 @@ export default class LightboxExample extends Component {
         return (
             <div>
                 <div className="lightbox__wrap container">
-                    <img className="lightbox__img" src="./images/new/car-one-min.jpg"
+                    <img className="lightbox__img" src="./images/sk/wood.jpg"
                          onClick={() => this.setState({ isOpen: true, photoIndex: 0 })}/>
-                    <img className="lightbox__img" src="./images/new/car-two-min.jpg"
+                    <img className="lightbox__img" src="./images/sk/sertificate1.jpg"
                          onClick={() => this.setState({ isOpen: true, photoIndex: 1 })}/>
-                    <img className="lightbox__img" src="./images/new/car-three-min.jpg"
+                    <img className="lightbox__img" src="./images/sk/sertificate.jpg"
                          onClick={() => this.setState({ isOpen: true, photoIndex: 2 })}/>
-                    <img className="lightbox__img" src="./images/new/car-four-min.jpg"
+                    <img className="lightbox__img" src="./images/sk/sertificate3.jpg"
                          onClick={() => this.setState({ isOpen: true, photoIndex: 3 })}/>
                 </div>
 

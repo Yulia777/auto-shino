@@ -1,20 +1,22 @@
 .recommendations {
-  padding: $padding-screen;
-  background-color: $fone;
+  padding: 80px 0 40px 0;
   &__title {
-    font-size: $subtitle;
+    font-size: $middle-fonts;
+    font-weight: 100;
     text-align: center;
-    margin: 0;
-    &:after {
-      display: block;
+    margin: 0 0 45px 0;
+    span {
+      font-family: $bold;
     }
   }
   &__desc {
     text-align: center;
-    font-size: $subtitle-min;
-    max-width: 450px;
+    font-size: $middle-fonts;
     margin: auto;
-    padding: $titles;
+    padding: 96px 0 0;
+    span {
+      font-family: $bold;
+    }
   }
   .services {
     &__item {

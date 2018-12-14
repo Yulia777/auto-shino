@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {callbackSuccess, sendEmail} from "../../../actions/actions";
 import Popup from '../../elements/popup/popup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Examples extends Component{
 
@@ -42,56 +43,25 @@ class Examples extends Component{
     render() {
         return(
             <section className="examples">
-                <div className="container examples__wrap">
-                    <h2 className="examples__title">
-                        Примеры выполненных работ
+                <div className="order">
+                    <h2 className="order__title">
+                        ЗАФИКСИРУЙ СКИДКУ <span>ДО 30%</span><br/>
+                        НА СТРОИТЕЛЬСТВО ФУНДАМЕНТА
                     </h2>
-                    <p className="examples__desc">
-                        Нестандартные решения с учетом специфики Вашего бизнеса
-                    </p>
-                    <div className="goods">
-                        <div className="goods__item">
-                            <div className="good">
-                                <img src="./images/rea-min.png" className="good__img" alt="Брелок" title="Брелок"/>
-                            </div>
-                            <div className="good">
-                                <img src="./images/icae-min.png" className="good__img" alt="Чехол" title="Чехол"/>
-                            </div>
-                            <div className="good">
-                                <img src="./images/photo-min.png" className="good__img" alt="Посуда" title="Посуда"/>
-                            </div>
-                            <div className="good">
-                                <img src="./images/photo-icae-min.png" className="good__img" alt="Спортивный сувенир"
-                                     title="Спортивный сувенир"/>
-                            </div>
-                        </div>
-                        <div className="goods__item">
-                            <div className="good">
-                                <img src="./images/camozzi-min.png" className="good__img" alt="Сувениры"
-                                     title="Сувениры"/>
-                            </div>
-                            <div className="good">
-                                <img src="./images/spec-min.png" className="good__img" alt="Сувениры-магнитики"
-                                     title="Сувениры-магнитики"/>
-                            </div>
-                            <div className="good">
-                                <img src="./images/metall-min.png" className="good__img" alt="Подарочные часы"
-                                     title="Подарочные часы"/>
-                            </div>
-                            <div className="good">
-                                <img src="./images/organaizer-min.png" className="good__img" alt="Органайзер"
-                                     title="Органайзер"/>
-                            </div>
-                        </div>
-                        <div className="goods__btn">
-                            <button className="btn" onClick={this.openPopupExamples.bind(this)}>
-                                Сделать заказ
-                            </button>
-                        </div>
-                    </div>
+                    <button className="examples__btn" onClick={this.openPopupExamples.bind(this)}>
+                        <p>
+                            <FontAwesomeIcon icon="check" />
+                        </p>
+                        <p>
+                            ЗАБРОНИРОВАТЬ СКИДКУ ДО 30%
+                        </p>
+                    </button>
+                    <a href="" className="order__link">
+                        УЗНАТЬ ПОДРОБНЕЕ
+                    </a>
                 </div>
                 <Popup
-                    title={'Сделать заказ'}
+                    title={'Зафиксировать скидку'}
                     state={this.state.popupOrderExample}
                     close={this.closePopupExamples.bind(this)}
                     type={'blank'}

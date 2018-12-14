@@ -60,6 +60,16 @@ body{
 .container {
   margin: 0 auto;
 }
+.lightbox {
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  &__img {
+    cursor: pointer;
+  }
+}
 
 
 @import "../../assets/scss/tablet/tablet";
@@ -79,5 +89,10 @@ body{
 @media (min-width:1200px) {
   .container {
     width: 1170px;
+  }
+}
+@media (min-width:1400px) {
+  .container {
+    width: 1370px;
   }
 }
