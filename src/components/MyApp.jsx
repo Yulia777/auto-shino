@@ -26,6 +26,7 @@ class MyApp extends React.Component{
                     <Categories/>
                     <Recommendations/>
                     <Examples/>
+                    <Questions/>
                     {/*<Visualization/>
                     <Clients/>
                     <Presentation/>

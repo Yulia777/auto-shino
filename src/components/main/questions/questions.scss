@@ -2,9 +2,20 @@
   padding: $padding-screen;
   background-color: $fone;
   &__title {
-    font-size: $subtitle;
+    font-size: 26px;
     text-align: center;
-    margin: 0;
+    margin: 0 0 20px 0;
+    background: $brown;
+    border-bottom: 4px solid $brown-dark;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 25px 0;
+    span {
+      font-weight: 600;
+      color: $red-lat-screen;
+      font-size:$middle-fonts;
+      font-family: $bold;
+    }
     &:after {
       display: block;
     }
@@ -45,6 +56,32 @@
       padding: 0 60px!important;
       display: block;
       margin: auto;
+    }
+  }
+  .surprise {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &__item {
+
+    }
+    &__wrap {
+      width: 450px;
+      height: 350px;
+      background: $brown;
+      display: flex;
+      flex-direction: column;
+    }
+    &__img {
+      position: relative;
+      bottom: 110px;
+    }
+    &__bant {
+      width: 140px;
+      height: 120px;
+      position: relative;
+      bottom: 175px;
+      left: 95px;
     }
   }
 }
