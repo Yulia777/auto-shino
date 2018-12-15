@@ -16,6 +16,9 @@
 @import "../../components/elements/popup/popup";
 @import "../../components/elements/forms/form-blank/form-blank";
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 
 body{
   @include main-theme-font-regular;

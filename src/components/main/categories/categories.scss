@@ -9,10 +9,11 @@
     background: $brown;
     border-bottom: 4px solid $brown-dark;
     border-radius: 10px;
-    font-weight: 100;
+    font-weight: 600;
     padding: 25px 0;
     span {
       font-weight: 600;
+      font-family: $bold;
     }
     &:after {
       display: block;

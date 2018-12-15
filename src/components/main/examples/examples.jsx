@@ -10,7 +10,8 @@ class Examples extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            popupOrderExample: false
+            popupOrderExample: false,
+            popupKnowFundament: false
         };
     }
 
@@ -29,15 +30,22 @@ class Examples extends Component{
 
         this.props.sendEmail(formData);
         this.props.callbackSuccess(true);
-        yaCounter31086026.reachGoal('GotovyeZakazy');
+        yaCounter21935674.reachGoal('zafiksirovat-skidku-na-fundament-submit');
     }
     openPopupExamples() {
         this.setState({popupOrderExample: true});
-        yaCounter31086026.reachGoal('NashyRaboty');
+        yaCounter21935674.reachGoal('zafiksirovat-skidku-na-fundament-form');
     }
     closePopupExamples() {
         this.setState({popupOrderExample: false});
         this.props.callbackSuccess(false);
+    }
+
+    openPopupKnowFundament() {
+        this.setState({popupKnowFundament: true});
+    }
+    closePopupKnowFundament() {
+        this.setState({popupKnowFundament: false});
     }
 
     render() {
@@ -56,9 +64,9 @@ class Examples extends Component{
                             ЗАБРОНИРОВАТЬ СКИДКУ ДО 30%
                         </p>
                     </button>
-                    <a href="" className="order__link">
+                    <p onClick={this.openPopupKnowFundament.bind(this)} className="order__link">
                         УЗНАТЬ ПОДРОБНЕЕ
-                    </a>
+                    </p>
                 </div>
                 <Popup
                     title={'Зафиксировать скидку'}
@@ -67,6 +75,12 @@ class Examples extends Component{
                     type={'blank'}
                     notification={this.props.isNotification}
                     formClick={this.sendFormExamples.bind(this)}
+                />
+                <Popup
+                    state={this.state.popupKnowFundament}
+                    close={this.closePopupKnowFundament.bind(this)}
+                    type={'fundament'}
+                    notification={this.props.isNotification}
                 />
             </section>
         )
