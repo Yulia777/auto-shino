@@ -2,6 +2,8 @@ import React from 'react';
 import FormBlank from "../forms/form-blank/form-blank";
 import FormEmail from "../forms/form-email/form-email";
 import FormMini from '../forms/form-mini/form-mini';
+import PopupKnow from '../popup-know-more/popup-know-more';
+import PopupKnowFundament from '../popup-know-more/popup-know-more-fundament';
 
 const Popup = (props) => {
     const setForm = () => {
@@ -11,6 +13,12 @@ const Popup = (props) => {
             return <FormEmail send={props.formClick}/>
         } else if(props.type === 'mini') {
             return <FormMini send={props.formClick}/>
+        }
+        else if(props.type === 'know') {
+            return <PopupKnow/>
+        }
+        else if(props.type === 'fundament') {
+            return <PopupKnowFundament/>
         }
     };
     console.log(props);

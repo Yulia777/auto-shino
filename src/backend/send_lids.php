@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if(CEvent::Send("GET-EXAMPLE_LP", SITE_ID, [
                     'NAME'=>iconv('utf-8','cp1251',$arrRequest['name']),
                     'PHONE'=>$arrRequest['phone'],
-                    'MESSAGE'=>$arrRequest['message']
+                    'EMAIL'=>$arrRequest['email']
                 ])){
                     echo json_encode(['response'=>true]);
                 }

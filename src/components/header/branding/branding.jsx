@@ -10,7 +10,8 @@ class Branding extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            popupGetIdea: false
+            popupGetIdea: false,
+            popupKnow: false
         };
     }
 
@@ -28,17 +29,23 @@ class Branding extends Component{
 
         this.props.sendEmail(formData);
         this.props.getIdeaSuccess(true);
-        yaCounter31086026.reachGoal('Poluchit');
+        yaCounter21935674.reachGoal('zabronirovat-dom-submit');
     }
     openPopupGetIdea() {
         this.setState({popupGetIdea: true});
-        yaCounter31086026.reachGoal('Idei');
+        yaCounter21935674.reachGoal('zabronirovat-dom-form');
     }
     closePopupGetIdea() {
         this.setState({popupGetIdea: false});
         this.props.getIdeaSuccess(false);
     }
 
+    openPopupKnow() {
+        this.setState({popupKnow: true});
+    }
+    closePopupKnow() {
+        this.setState({popupKnow: false});
+    }
 
     render() {
         return(
@@ -80,9 +87,9 @@ class Branding extends Component{
                             ЗАБРОНИРОВАТЬ ДОМ ПО ЦЕНЕ 2018 г.
                         </p>
                     </button>
-                    <a href="" className="order__link">
+                    <p onClick={this.openPopupKnow.bind(this)} className="order__link">
                         УЗНАТЬ ПОДРОБНЕЕ
-                    </a>
+                    </p>
                 </div>
                 <Popup
                     title={'Забронировать дом по цене 2018г'}
@@ -91,6 +98,12 @@ class Branding extends Component{
                     type={'email'}
                     notification={this.props.isNotification}
                     formClick={this.sendFormGetIdea.bind(this)}
+                />
+                <Popup
+                    state={this.state.popupKnow}
+                    close={this.closePopupKnow.bind(this)}
+                    type={'know'}
+                    notification={this.props.isNotification}
                 />
             </section>
                 )

@@ -29,11 +29,11 @@ class Categories extends Component{
 
         this.props.sendEmail(formData);
         this.props.orderSuccess(true);
-        yaCounter31086026.reachGoal('OformitProdukciu');
+        yaCounter21935674.reachGoal('3d-modelirovanie-submit');
     }
     openPopupOrder() {
         this.setState({popupOrder: true});
-        yaCounter31086026.reachGoal('SdelatZakaz');
+        yaCounter21935674.reachGoal('3d-modelirovanie-form');
     }
     closePopupOrder() {
         this.setState({popupOrder: false});
