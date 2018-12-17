@@ -74,10 +74,29 @@ body{
   }
 }
 
-input[placeholder]          {color:grey;}
-input::-moz-placeholder     {color:grey;}
-input:-moz-placeholder      {color:grey;}
-input:-ms-input-placeholder {color:grey;}
+.form-blank {
+  &__wrap input::-webkit-input-placeholder {
+    color: #A99D7C !important;
+}
+}
+
+.form-blank {
+  &__wrap input::-moz-placeholder {
+    color: #A99D7C !important;
+  }
+}
+
+.form-blank {
+  &__wrap input:-moz-placeholder {
+    color: #A99D7C !important;
+  }
+}
+
+.form-blank {
+  &__wrap input:-ms-input-placeholder {
+    color: #A99D7C !important;
+  }
+}
 
 textarea[placeholder]          {color:grey;}
 textarea::-moz-placeholder     {color:grey;}
