@@ -74,28 +74,58 @@ body{
   }
 }
 
-.form-blank {
-  &__wrap input::-webkit-input-placeholder {
-    color: #A99D7C !important;
+.popup-overlay {
+  .popup-form {
+    .form-blank__wrap {
+      .form-blank {
+        input::-webkit-input-placeholder {
+          color: #A99D7C !important;
+        }
+        input::-moz-placeholder {
+          color: #A99D7C !important;
+        }
+        input:-moz-placeholder {
+          color: #A99D7C !important;
+        }
+        input:-ms-input-placeholder {
+          color: #A99D7C !important;
+        }
+      }
+    }
+  }
 }
-}
-
-.form-blank {
-  &__wrap input::-moz-placeholder {
-    color: #A99D7C !important;
+.questions {
+  &__wrap {
+    .slider-form {
+      .questions {
+        &__form {
+          input::-webkit-input-placeholder {
+            color: #A99D7C !important;
+          }
+          input::-moz-placeholder {
+            color: #A99D7C !important;
+          }
+          input:-moz-placeholder {
+            color: #A99D7C !important;
+          }
+          input:-ms-input-placeholder {
+            color: #A99D7C !important;
+          }
+        }
+      }
+    }
   }
 }
 
-.form-blank {
-  &__wrap input:-moz-placeholder {
-    color: #A99D7C !important;
-  }
+.header {
+  background: #ffffff;
+  height: 80px;
 }
-
-.form-blank {
-  &__wrap input:-ms-input-placeholder {
-    color: #A99D7C !important;
-  }
+.img-responsive {
+  height: 65px;
+}
+.menu_icon {
+  height: 80px;
 }
 
 textarea[placeholder]          {color:grey;}
