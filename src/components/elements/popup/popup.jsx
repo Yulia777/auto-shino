@@ -21,11 +21,11 @@ const Popup = (props) => {
             return <PopupKnowFundament/>
         }
     };
-    console.log(props);
+    //console.log(props);
     if(props.state) {
         return(
             <section className={'popup-overlay'} style={props.state ? {display: 'block'} : null}>
-                <div className="popup-form">
+                <div className={props.area}>
                     <div className="popup-form__close" onClick={props.close}>&times;</div>
                     <p>{props.title}</p>
                     {props.notification ? <h5 className={'popup-form__notification'}>Менеджер свяжется с Вами в ближайшее время</h5> : null}

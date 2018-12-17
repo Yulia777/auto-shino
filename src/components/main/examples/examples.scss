@@ -134,15 +134,31 @@
       cursor: pointer;
     }
   }
-  .popup-overlay .popup-form {
-    width: 770px;
-    top: calc(50% - 206px);
-    .know-more {
-      img {
-        width: 700px;
-        margin: auto;
-        display: block;
-      }
+  .popup-overlay .form-examples {
+    width: 770px !important;
+    top: calc(50% - 306px) !important;
+    img {
+      width: 700px;
+      margin: auto;
+      display: block;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .form-blank__field {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+    .btn {
+      height: 40px;
+    }
+    input[type="submit"] {
+      margin: 0 auto;
+      width: 40%;
+      padding: 10px 0;
     }
   }
 }

@@ -134,7 +134,18 @@
       cursor: pointer;
     }
   }
-  .popup-overlay .popup-form {
+  .popup-overlay .form-branding {
+    width: 770px!important;
+    top: calc(50% - 306px)!important;
+    .know-more {
+      img {
+        width: 700px;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+  /*.popup-overlay .popup-form {
     width: 770px;
     top: calc(50% - 306px);
     .know-more {
@@ -144,5 +155,5 @@
         display: block;
       }
     }
-  }
+  }*/
 }

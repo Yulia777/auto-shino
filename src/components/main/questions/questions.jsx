@@ -40,12 +40,13 @@ class Questions extends Component{
                         <div className="slider">
                             <SimpleSlider/>
                         </div>
-                        <form className="questions__form">
-                            <input type="text" placeholder="Как Вас зовут?" className="field"/>
-                            <MaskedInput  mask="+7(111) 111 11 11" type="text" placeholder={'Введите Ваш телефон*'} size={''}
-                                          name="number" required="true" className="field"/>
+                        <form className="questions__form" id="specialists">
+                            <input type="text" placeholder="Как Вас зовут?" className="field" id="specialists-name"/>
+                            <MaskedInput id="specialists-phone" mask="+7(111) 111 11 11" type="text"
+                                         placeholder={'Введите Ваш телефон*'} size={''}
+                                          name="number" className="field"/>
                             {/*<input type="text" placeholder="Введите Ваш телефон" className="field"/>*/}
-                            <input type="text" placeholder="Введите Ваш Email" className="field"/>
+                            <input type="text" placeholder="Введите Ваш Email" className="field" id="specialists-email"/>
                             <button className="btn">
                                 ПЕРЕЗВОНИТЬ
                             </button>
