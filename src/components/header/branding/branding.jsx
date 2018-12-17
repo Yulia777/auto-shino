@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import {getIdeaSuccess, sendEmail} from "../../../actions/actions";
+import {getIdeaSuccess} from "../../../actions/actions";
 import Popup from '../../elements/popup/popup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -15,7 +15,7 @@ class Branding extends Component{
         };
     }
 
-    sendFormGetIdea(event) {
+    /*sendFormGetIdea(event) {
         event.preventDefault();
         const formData = {
             type: 'email',
@@ -30,7 +30,7 @@ class Branding extends Component{
         this.props.sendEmail(formData);
         this.props.getIdeaSuccess(true);
         yaCounter21935674.reachGoal('zabronirovat-dom-submit');
-    }
+    }*/
     openPopupGetIdea() {
         this.setState({popupGetIdea: true});
         yaCounter21935674.reachGoal('zabronirovat-dom-form');
@@ -93,14 +93,16 @@ class Branding extends Component{
                 </div>
                 <Popup
                     title={'Забронировать дом по цене 2018г'}
+                    area={'popup-form'}
                     state={this.state.popupGetIdea}
                     close={this.closePopupGetIdea.bind(this)}
                     type={'email'}
                     notification={this.props.isNotification}
-                    formClick={this.sendFormGetIdea.bind(this)}
+                    //formClick={this.sendFormGetIdea.bind(this)}
                 />
                 <Popup
                     state={this.state.popupKnow}
+                    area={'popup-form form-branding'}
                     close={this.closePopupKnow.bind(this)}
                     type={'know'}
                     notification={this.props.isNotification}
@@ -118,7 +120,7 @@ export function mapStateToProps(store) {
 }
 
 export const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({getIdeaSuccess, sendEmail}, dispatch)
+    return bindActionCreators({getIdeaSuccess}, dispatch)
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Branding);

@@ -14,7 +14,7 @@ class Categories extends Component{
         };
     }
 
-    sendFormOrder(event) {
+    /*sendFormOrder(event) {
         event.preventDefault();
         const formData = {
             type: 'order-category',
@@ -30,7 +30,7 @@ class Categories extends Component{
         this.props.sendEmail(formData);
         this.props.orderSuccess(true);
         yaCounter21935674.reachGoal('3d-modelirovanie-submit');
-    }
+    }*/
     openPopupOrder() {
         this.setState({popupOrder: true});
         yaCounter21935674.reachGoal('3d-modelirovanie-form');
@@ -92,12 +92,13 @@ class Categories extends Component{
                     </div>
                 </div>
                 <Popup
-                    title={'Получить экспресс услугу'}
+                    title={'Эскизное проектирование с 3D моделированием'}
+                    area={'popup-form form-categories'}
                     state={this.state.popupOrder}
                     close={this.closePopupOrder.bind(this)}
-                    type={'blank'}
+                    type={'mini'}
                     notification={this.props.isNotification}
-                    formClick={this.sendFormOrder.bind(this)}
+                    //formClick={this.sendFormOrder.bind(this)}
                 />
             </section>
         )

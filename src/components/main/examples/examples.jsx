@@ -15,7 +15,7 @@ class Examples extends Component{
         };
     }
 
-    sendFormExamples(event) {
+    /*sendFormExamples(event) {
         event.preventDefault();
         const formData = {
             type: 'examples',
@@ -31,7 +31,7 @@ class Examples extends Component{
         this.props.sendEmail(formData);
         this.props.callbackSuccess(true);
         yaCounter21935674.reachGoal('zafiksirovat-skidku-na-fundament-submit');
-    }
+    }*/
     openPopupExamples() {
         this.setState({popupOrderExample: true});
         yaCounter21935674.reachGoal('zafiksirovat-skidku-na-fundament-form');
@@ -69,14 +69,16 @@ class Examples extends Component{
                     </p>
                 </div>
                 <Popup
-                    title={'Зафиксировать скидку'}
+                    title={'Зафиксировать скидку до 30%'}
+                    area={'popup-form'}
                     state={this.state.popupOrderExample}
                     close={this.closePopupExamples.bind(this)}
                     type={'blank'}
                     notification={this.props.isNotification}
-                    formClick={this.sendFormExamples.bind(this)}
+                    //formClick={this.sendFormExamples.bind(this)}
                 />
                 <Popup
+                    area={'popup-form form-examples'}
                     state={this.state.popupKnowFundament}
                     close={this.closePopupKnowFundament.bind(this)}
                     type={'fundament'}

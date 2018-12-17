@@ -139,3 +139,21 @@
   from{height: 0;}
   to{height: auto;}
 }
+/*
+.form-blank {
+  &__wrap {
+    background:#fff;
+    width: 400px;
+    margin:auto;
+    top: calc(50% - 306px);
+  }
+}
+.popup-overlay .popup-form p {
+  width: 400px;
+  margin: auto;
+  background: #fff;
+  padding-top: 15px;
+}
+.popup-overlay .popup-form input[type="submit"] {
+  width: 56%;
+}*/
