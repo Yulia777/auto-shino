@@ -74,10 +74,59 @@ body{
   }
 }
 
-input[placeholder]          {color:grey;}
-input::-moz-placeholder     {color:grey;}
-input:-moz-placeholder      {color:grey;}
-input:-ms-input-placeholder {color:grey;}
+.popup-overlay {
+  .popup-form {
+    .form-blank__wrap {
+      .form-blank {
+        input::-webkit-input-placeholder {
+          color: #A99D7C !important;
+        }
+        input::-moz-placeholder {
+          color: #A99D7C !important;
+        }
+        input:-moz-placeholder {
+          color: #A99D7C !important;
+        }
+        input:-ms-input-placeholder {
+          color: #A99D7C !important;
+        }
+      }
+    }
+  }
+}
+.questions {
+  &__wrap {
+    .slider-form {
+      .questions {
+        &__form {
+          input::-webkit-input-placeholder {
+            color: #A99D7C !important;
+          }
+          input::-moz-placeholder {
+            color: #A99D7C !important;
+          }
+          input:-moz-placeholder {
+            color: #A99D7C !important;
+          }
+          input:-ms-input-placeholder {
+            color: #A99D7C !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header {
+  background: #ffffff;
+  height: 80px;
+}
+.img-responsive {
+  height: 65px;
+}
+.menu_icon {
+  height: 80px;
+}
 
 textarea[placeholder]          {color:grey;}
 textarea::-moz-placeholder     {color:grey;}
